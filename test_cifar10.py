@@ -37,7 +37,7 @@ parser.add_argument('--n_classes', type=int, default=512, help='(default=%(defau
 parser.add_argument('--buffer_batch_size', type=int, default=64, help='(default=%(default)s)')
 args = parser.parse_args()
 import os
-gpus = [0]#, 1, 2, 3,5,6,7]
+gpus = [8]#, 1, 2, 3,5,6,7]
 torch.cuda.set_device('cuda:{}'.format(gpus[0]))
 from apex import amp
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # ignore warning
